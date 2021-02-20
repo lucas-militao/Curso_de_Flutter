@@ -29,6 +29,28 @@ class HomePageState extends State<HomePage> {
           children: [
             Text('Contador: $counter'),
             CustomSwitcher(),
+            Container(height: 10,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  width: 50,
+                  height: 50,
+                  color: Colors.black,
+                ),
+                Container(
+                  width: 50,
+                  height: 50,
+                  color: Colors.black,
+                ),
+                Container(
+                  width: 50,
+                  height: 50,
+                  color: Colors.black,
+                )
+              ],
+            )
           ],),
       ),
       floatingActionButton: FloatingActionButton(
