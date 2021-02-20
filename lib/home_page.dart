@@ -24,7 +24,15 @@ class HomePageState extends State<HomePage> {
           setState(() {
             counter++;
           });
-        },),),
+        },
+      ),),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: () {
+          setState(() {
+            counter++;
+          });
+      },),
     );
   }
 
