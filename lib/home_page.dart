@@ -21,8 +21,15 @@ class HomePageState extends State<HomePage> {
           CustomSwitcher(),
         ],
       ),
-      body: Center (
-        child: CustomSwitcher(),
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Contador: $counter'),
+            CustomSwitcher(),
+          ],),
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
