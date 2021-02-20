@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:ola_mundo/app_controller.dart';
 
 class HomePage extends StatefulWidget{
@@ -24,10 +25,39 @@ class HomePageState extends State<HomePage> {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+              child: ListView (
+                scrollDirection: Axis.vertical,
+                // mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text('Contador: $counter'),
+            CustomSwitcher(),
+            Container(height: 10,),
+            CustomSwitcher(),
+            Container(height: 10,),
+            CustomSwitcher(),
+            Container(height: 10,),
+            CustomSwitcher(),
+            Container(height: 10,),
+            CustomSwitcher(),
+            Container(height: 10,),
+            CustomSwitcher(),
+            Container(height: 10,),
+            CustomSwitcher(),
+            Container(height: 10,),
+            CustomSwitcher(),
+            Container(height: 10,),
+            CustomSwitcher(),
+            Container(height: 10,),
+            CustomSwitcher(),
+            Container(height: 10,),
+            CustomSwitcher(),
+            Container(height: 10,),
+            CustomSwitcher(),
+            Container(height: 10,),
+            CustomSwitcher(),
+            Container(height: 10,),
+            CustomSwitcher(),
+            Container(height: 10,),
             CustomSwitcher(),
             Container(height: 10,),
             Row(
