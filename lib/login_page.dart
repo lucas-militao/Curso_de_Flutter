@@ -27,38 +27,60 @@ class _LoginPageState extends State<LoginPage> {
                     child: Image.asset('assets/images/logo.png'),
                   ),
                   Container(
-                    height: 0,
+                    height: 20,
                   ),
-                  TextField(
-                    onChanged: (text) {
-                      email = text;
-                    },
-                    keyboardType: TextInputType.emailAddress,
-                    decoration: InputDecoration(
-                        labelText: 'Email', border: OutlineInputBorder()),
+                  Card(
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                        left: 12,
+                        right: 12,
+                        top: 20,
+                        bottom: 12),
+                      child: Column(
+                        children: [
+                          TextField(
+                            onChanged: (text) {
+                              email = text;
+                            },
+                            keyboardType: TextInputType.emailAddress,
+                            decoration: InputDecoration(
+                                labelText: 'Email',
+                                border: OutlineInputBorder()),
+                          ),
+                          SizedBox(
+                            height: 15,
+                          ),
+                          TextField(
+                            onChanged: (text) {
+                              password = text;
+                            },
+                            obscureText: true,
+                            decoration: InputDecoration(
+                                labelText: 'Password',
+                                border: OutlineInputBorder()),
+                          ),
+                          SizedBox (height: 15),
+                          RaisedButton(
+                            textColor: Colors.white,
+                            color: Colors.purple,
+                            onPressed: () {
+                              if (email == 'lucasmilitao@email.com' &&
+                                  password == 'lucas2312') {
+                                Navigator.of(context)
+                                    .pushReplacementNamed('/home');
+                              } else {
+                                print('login incorreto');
+                              }
+                            },
+                            child: Container (
+                                width: double.infinity, 
+                                child: Text('Entrar', textAlign: TextAlign.center,)
+                              ),
+                          )
+                        ],
+                      ),
+                    ),
                   ),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  TextField(
-                    onChanged: (text) {
-                      password = text;
-                    },
-                    obscureText: true,
-                    decoration: InputDecoration(
-                        labelText: 'Password', border: OutlineInputBorder()),
-                  ),
-                  RaisedButton(
-                    onPressed: () {
-                      if (email == 'lucasmilitao@email.com' &&
-                          password == 'lucas2312') {
-                        Navigator.of(context).pushReplacementNamed('/home');
-                      } else {
-                        print('login incorreto');
-                      }
-                    },
-                    child: Text('Entrar'),
-                  )
                 ],
               ),
             )),
@@ -72,10 +94,14 @@ class _LoginPageState extends State<LoginPage> {
       body: Stack(
         children: [
           SizedBox(
-            height: MediaQuery.of(context).size.height,
-            child: Image.asset('assets/images/background.jpg', fit: BoxFit.cover,)
+              height: MediaQuery.of(context).size.height,
+              child: Image.asset(
+                'assets/images/background.jpg',
+                fit: BoxFit.cover,
+              )),
+          Container(
+            color: Colors.black.withOpacity(0.3),
           ),
-          Container(color: Colors.black.withOpacity(0.3),),
           _body(),
         ],
       ),
