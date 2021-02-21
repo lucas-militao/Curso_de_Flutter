@@ -20,7 +20,11 @@ class AppWidget extends StatelessWidget {
               : Brightness.light,
               primarySwatch: Colors.red
             ),
-            home: LoginPage(),
+            initialRoute: '/',
+            routes: {
+              '/': (context) => LoginPage(),
+              '/home': (context) => HomePage()
+            }
           );
         },
     );
