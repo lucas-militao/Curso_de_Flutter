@@ -25,9 +25,7 @@ class _LoginPageState extends State<LoginPage> {
               Container(
                 width: 200,
                 height: 200,
-                child: Image.network(
-                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF8woqOxH2MjA2hJu3rVjQRHoMZ8YR64Uu9g&usqp=CAU'
-                  ),
+                child: Image.asset('assets/images/logo.png'),
               ),
               Container(
                 height: 0,
